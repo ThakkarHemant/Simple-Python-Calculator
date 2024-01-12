@@ -1,21 +1,4 @@
 import math
-z=[]                           #EMPTY LIST
-x=int(input("number of digits you want to operate on :"))
-for i in range(1,x+1):
-    print("the value of number",i,"is = ")
-    y=int(input())
-    z.append(y)
-print("the numbers youve chosen are : ",z)
-
-
-def main():
-    z=[]                           #EMPTY LIST
-    x=int(input("number of digits you want to operate on :"))
-    for i in range(1,x+1):
-        print("the value of number",i,"is = ")
-        y=int(input())
-        z.append(y)
-    print("the numbers youve chosen are : ",z)
 
 def add():
     print("the sum of the numbers is",sum(z))
@@ -51,8 +34,16 @@ def sqroot():
     d4=int(input())
     print("the sqaure root of",d4,"is",(math.sqrt(d4)),"and the cube root is :",(d4)**1/3)
 
+def factorial():
+    print("Enter the number you want factorial of : ")
+    d5=int(input())
+    fact=1
+    for i in range(1,d5+1):
+        fact*=i
+    print("The factorial of :",d5,"is",fact)
+
 while True:
-    print("\n 1.ADD \n 2.SUBTRACT \n 3.MULTIPLY\n 4.DIVIDE \n 5.POWER FUNCTION \n 6.ROOT FUCNTION \n 8.Restart \n 9.End")
+    print("\n 1.ADD \n 2.SUBTRACT \n 3.MULTIPLY\n 4.DIVIDE \n 5.POWER FUNCTION \n 6.ROOT FUCNTION \n 7.FACTORIAL \n 8.Restart \n 9.End")
     ch=int(input("what do you want to perform on these numbers ?"))
     if ch==1:
         add()
@@ -66,8 +57,8 @@ while True:
         power()
     elif ch==6:
         sqroot()
-    elif ch==8:
-        main()
+    elif ch==7:
+        factorial()
     elif ch==9:
         break
     f=input("do you want more ?(Y/N)")
